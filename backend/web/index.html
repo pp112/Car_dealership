@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <title>Автосалон — поиск автомобилей</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="/web/style.css">
+</head>
+<body>
+  <h1>Поиск автомобилей</h1>
+
+  <form id="searchForm">
+    <label>Поле поиска:</label>
+    <select id="field">
+      <option value="brand">Марка</option>
+      <option value="model">Модель</option>
+      <option value="year">Год выпуска</option>
+      <option value="price">Цена (тыс. руб.)</option>
+    </select>
+
+    <!-- Блок для числовых запросов -->
+    <div id="numericSearch" style="display: none;">
+      <label>Оператор:</label>
+      <select id="operator">
+        <option value="=">=</option>
+        <option value=">">&gt;</option>
+        <option value=">=">&gt;=</option>
+        <option value="<">&lt;</option>
+        <option value="<=">&lt;=</option>
+      </select>
+
+      <label>Значение:</label>
+      <input id="numericValue" type="number" placeholder="Введите число"/>
+    </div>
+
+    <!-- Блок для текстовых запросов -->
+    <label id="textLabel">Запрос:</label>
+    <input id="q" type="text" placeholder="Например: Toyota"/>
+
+    <button type="submit">🔍 Найти</button>
+    <button type="button" id="showAllBtn">Показать все автомобили</button>
+  </form>
+
+  <div id="result">
+    <table id="resTable" style="display:none">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Марка</th>
+          <th>Модель</th>
+          <th>Год</th>
+          <th>Цена (тыс. руб.)</th>
+        </tr>
+      </thead>
+      <tbody id="resBody"></tbody>
+    </table>
+    <p id="nores" style="display:none">Ничего не найдено.</p>
+  </div>
+
+  <script src="/web/app.js"></script>
+</body>
+</html>
