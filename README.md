@@ -3,8 +3,8 @@
 #### 1. Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/pp112/Sports_clubs.git
-cd Sports_clubs/
+git clone https://github.com/pp112/Car_dealership.git
+cd Car_dealership/
 ```
 
 #### 2. Запустите через Docker Compose:
